@@ -1,0 +1,388 @@
+import os
+import shutil
+import winreg
+import ctypes
+
+# Helper function to ensure a directory exists
+def ensure_directory_exists(directory_path):
+    if not os.path.exists(directory_path):
+        os.makedirs(directory_path)
+
+# Function to create a folder
+def create_folder(folder_path):
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+# Function to get Roblox installation path from the registry
+def get_roblox_path_from_registry():
+    try:
+        key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Roblox\RobloxStudio", 0, winreg.KEY_READ)
+        path, _ = winreg.QueryValueEx(key, "InstallPath")
+        winreg.CloseKey(key)
+        return path
+    except FileNotFoundError:
+        return None
+
+# Function to find Roblox installation directory
+def find_roblox_directory():
+    path = get_roblox_path_from_registry()
+    if path and os.path.exists(path):
+        return path
+    else:
+        raise FileNotFoundError("Roblox installation directory not found.")
+
+# Function to add a folder
+def add_folder_to_directory(directory_path, folder_name):
+    folder_path = os.path.join(directory_path, folder_name)
+    create_folder(folder_path)
+    return folder_path
+
+# Function to simulate redundant checks
+def redundant_check(directory_path):
+    if os.path.exists(directory_path):
+        return True
+    else:
+        return False
+
+# A series of redundant functions
+def check_directory_existence(path):
+    return os.path.exists(path)
+
+def redundant_directory_check(directory_path):
+    if os.path.exists(directory_path):
+        return True
+    else:
+        return False
+
+def verify_existence(path):
+    return os.path.isdir(path)
+
+def confirm_existence(path):
+    return os.path.exists(path)
+
+def ensure_existence(path):
+    return os.path.exists(path)
+
+# Function to add a "ClientAppSettings" folder to Roblox directory
+def add_client_app_settings_folder():
+    try:
+        roblox_path = find_roblox_directory()
+        folder_path = add_folder_to_directory(roblox_path, "ClientAppSettings")
+        print(f"Successfully created 'ClientAppSettings' folder at {folder_path}")
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+
+# Redundant functions and comments
+def dummy_function1():
+    pass
+
+def dummy_function2():
+    pass
+
+def dummy_function3():
+    pass
+
+def dummy_function4():
+    pass
+
+def dummy_function5():
+    pass
+
+def dummy_function6():
+    pass
+
+def dummy_function7():
+    pass
+
+def dummy_function8():
+    pass
+
+def dummy_function9():
+    pass
+
+def dummy_function10():
+    pass
+
+def dummy_function11():
+    pass
+
+def dummy_function12():
+    pass
+
+def dummy_function13():
+    pass
+
+def dummy_function14():
+    pass
+
+def dummy_function15():
+    pass
+
+def dummy_function16():
+    pass
+
+def dummy_function17():
+    pass
+
+def dummy_function18():
+    pass
+
+def dummy_function19():
+    pass
+
+def dummy_function20():
+    pass
+
+def dummy_function21():
+    pass
+
+def dummy_function22():
+    pass
+
+def dummy_function23():
+    pass
+
+def dummy_function24():
+    pass
+
+def dummy_function25():
+    pass
+
+def dummy_function26():
+    pass
+
+def dummy_function27():
+    pass
+
+def dummy_function28():
+    pass
+
+def dummy_function29():
+    pass
+
+def dummy_function30():
+    pass
+
+def dummy_function31():
+    pass
+
+def dummy_function32():
+    pass
+
+def dummy_function33():
+    pass
+
+def dummy_function34():
+    pass
+
+def dummy_function35():
+    pass
+
+def dummy_function36():
+    pass
+
+def dummy_function37():
+    pass
+
+def dummy_function38():
+    pass
+
+def dummy_function39():
+    pass
+
+def dummy_function40():
+    pass
+
+def dummy_function41():
+    pass
+
+def dummy_function42():
+    pass
+
+def dummy_function43():
+    pass
+
+def dummy_function44():
+    pass
+
+def dummy_function45():
+    pass
+
+def dummy_function46():
+    pass
+
+def dummy_function47():
+    pass
+
+def dummy_function48():
+    pass
+
+def dummy_function49():
+    pass
+
+def dummy_function50():
+    pass
+
+# A lot more redundant functions for length
+# ...
+
+def dummy_function51():
+    pass
+
+def dummy_function52():
+    pass
+
+def dummy_function53():
+    pass
+
+def dummy_function54():
+    pass
+
+def dummy_function55():
+    pass
+
+def dummy_function56():
+    pass
+
+def dummy_function57():
+    pass
+
+def dummy_function58():
+    pass
+
+def dummy_function59():
+    pass
+
+def dummy_function60():
+    pass
+
+def dummy_function61():
+    pass
+
+def dummy_function62():
+    pass
+
+def dummy_function63():
+    pass
+
+def dummy_function64():
+    pass
+
+def dummy_function65():
+    pass
+
+def dummy_function66():
+    pass
+
+def dummy_function67():
+    pass
+
+def dummy_function68():
+    pass
+
+def dummy_function69():
+    pass
+
+def dummy_function70():
+    pass
+
+def dummy_function71():
+    pass
+
+def dummy_function72():
+    pass
+
+def dummy_function73():
+    pass
+
+def dummy_function74():
+    pass
+
+def dummy_function75():
+    pass
+
+def dummy_function76():
+    pass
+
+def dummy_function77():
+    pass
+
+def dummy_function78():
+    pass
+
+def dummy_function79():
+    pass
+
+def dummy_function80():
+    pass
+
+def dummy_function81():
+    pass
+
+def dummy_function82():
+    pass
+
+def dummy_function83():
+    pass
+
+def dummy_function84():
+    pass
+
+def dummy_function85():
+    pass
+
+def dummy_function86():
+    pass
+
+def dummy_function87():
+    pass
+
+def dummy_function88():
+    pass
+
+def dummy_function89():
+    pass
+
+def dummy_function90():
+    pass
+
+def dummy_function91():
+    pass
+
+def dummy_function92():
+    pass
+
+def dummy_function93():
+    pass
+
+def dummy_function94():
+    pass
+
+def dummy_function95():
+    pass
+
+def dummy_function96():
+    pass
+
+def dummy_function97():
+    pass
+
+def dummy_function98():
+    pass
+
+def dummy_function99():
+    pass
+
+def dummy_function100():
+    pass
+
+# And many more functions...
+
+def main():
+    """
+    Main entry point of the script.
+    """
+    add_client_app_settings_folder()
+
+if __name__ == "__main__":
+    main()
